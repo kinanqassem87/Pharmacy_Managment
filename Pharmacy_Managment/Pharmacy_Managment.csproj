@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A09C4B2F-4E27-40F5-ACDB-D442AABBE869}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pharmacy_Managment</RootNamespace>
+    <AssemblyName>Pharmacy_Managment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLASSACTIVEMATERIAL.cs" />
+    <Compile Include="BL\ClassHelper.cs" />
+    <Compile Include="BL\ClassOrder.cs" />
+    <Compile Include="BL\CLASSPRODUCT.cs" />
+    <Compile Include="BL\ClassRequest.cs" />
+    <Compile Include="BL\CLASSSCINTAFEICNAME.cs" />
+    <Compile Include="BL\ClassSupllier.cs" />
+    <Compile Include="BL\ClassUser.cs" />
+    <Compile Include="BL\CLASS_CATOGARY.cs" />
+    <Compile Include="BL\Class_CITY.cs" />
+    <Compile Include="BL\Class_COUNTRY.cs" />
+    <Compile Include="BL\CLASS_CUSTOMER.cs" />
+    <Compile Include="BL\CLASS_LOGIN.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="NewDBset\ClassInfo.cs" />
+    <Compile Include="PLL\ActiveMaterialManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\ActiveMaterialManagment.Designer.cs">
+      <DependentUpon>ActiveMaterialManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_About.Designer.cs">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_AddActiveMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_AddActiveMaterial.Designer.cs">
+      <DependentUpon>FRM_AddActiveMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_ADDCATOGARY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_ADDCATOGARY.Designer.cs">
+      <DependentUpon>FRM_ADDCATOGARY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_AddNewCustomer.Designer.cs">
+      <DependentUpon>FRM_AddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_AddNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_AddNewProduct.Designer.cs">
+      <DependentUpon>FRM_AddNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_addNewPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_addNewPurchase.Designer.cs">
+      <DependentUpon>FRM_addNewPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_AddnewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_AddnewSupplier.Designer.cs">
+      <DependentUpon>FRM_AddnewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_AddScinteficName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_AddScinteficName.Designer.cs">
+      <DependentUpon>FRM_AddScinteficName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_ADD_NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_ADD_NewUser.Designer.cs">
+      <DependentUpon>FRM_ADD_NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_Backup.Designer.cs">
+      <DependentUpon>FRM_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_CATOGARYMANAGMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_CATOGARYMANAGMENT.Designer.cs">
+      <DependentUpon>FRM_CATOGARYMANAGMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_City.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_City.Designer.cs">
+      <DependentUpon>FRM_City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_CountryManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_CountryManagment.Designer.cs">
+      <DependentUpon>FRM_CountryManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_CustomerManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_CustomerManagment.Designer.cs">
+      <DependentUpon>FRM_CustomerManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_Login.designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_MAIN.designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_NEW_SELL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_NEW_SELL.Designer.cs">
+      <DependentUpon>FRM_NEW_SELL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_OrderManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_OrderManagment.Designer.cs">
+      <DependentUpon>FRM_OrderManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_ProductExPierQTY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_ProductExPierQTY.Designer.cs">
+      <DependentUpon>FRM_ProductExPierQTY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_PRODUCTIMAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_PRODUCTIMAGE.Designer.cs">
+      <DependentUpon>FRM_PRODUCTIMAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_ProductManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_ProductManagment.Designer.cs">
+      <DependentUpon>FRM_ProductManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_Request_Managment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_Request_Managment.Designer.cs">
+      <DependentUpon>FRM_Request_Managment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_Restore.Designer.cs">
+      <DependentUpon>FRM_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_ScinteficNameManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_ScinteficNameManagment.Designer.cs">
+      <DependentUpon>FRM_ScinteficNameManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_Search.Designer.cs">
+      <DependentUpon>FRM_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_SupplierManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_SupplierManagment.Designer.cs">
+      <DependentUpon>FRM_SupplierManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\FRM_UserManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\FRM_UserManagment.Designer.cs">
+      <DependentUpon>FRM_UserManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT\RPT_AllProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_AllProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_AllProductN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_AllProductN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_order_print.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_order_print.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_printSelectedProducrN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_printSelectedProducrN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_printselectedProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_printselectedProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_print_requset.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_print_requset.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RRM_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\RRM_Reports.Designer.cs">
+      <DependentUpon>RRM_Reports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PLL\ActiveMaterialManagment.resx">
+      <DependentUpon>ActiveMaterialManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_About.resx">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_AddActiveMaterial.resx">
+      <DependentUpon>FRM_AddActiveMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_ADDCATOGARY.resx">
+      <DependentUpon>FRM_ADDCATOGARY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_AddNewCustomer.resx">
+      <DependentUpon>FRM_AddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_AddNewProduct.resx">
+      <DependentUpon>FRM_AddNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_addNewPurchase.resx">
+      <DependentUpon>FRM_addNewPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_AddnewSupplier.resx">
+      <DependentUpon>FRM_AddnewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_AddScinteficName.resx">
+      <DependentUpon>FRM_AddScinteficName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_ADD_NewUser.resx">
+      <DependentUpon>FRM_ADD_NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_Backup.resx">
+      <DependentUpon>FRM_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_CATOGARYMANAGMENT.resx">
+      <DependentUpon>FRM_CATOGARYMANAGMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_City.resx">
+      <DependentUpon>FRM_City.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_CountryManagment.resx">
+      <DependentUpon>FRM_CountryManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_CustomerManagment.resx">
+      <DependentUpon>FRM_CustomerManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_NEW_SELL.resx">
+      <DependentUpon>FRM_NEW_SELL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_OrderManagment.resx">
+      <DependentUpon>FRM_OrderManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_ProductExPierQTY.resx">
+      <DependentUpon>FRM_ProductExPierQTY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_PRODUCTIMAGE.resx">
+      <DependentUpon>FRM_PRODUCTIMAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_ProductManagment.resx">
+      <DependentUpon>FRM_ProductManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_Request_Managment.resx">
+      <DependentUpon>FRM_Request_Managment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_Restore.resx">
+      <DependentUpon>FRM_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_ScinteficNameManagment.resx">
+      <DependentUpon>FRM_ScinteficNameManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_Search.resx">
+      <DependentUpon>FRM_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_SupplierManagment.resx">
+      <DependentUpon>FRM_SupplierManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\FRM_UserManagment.resx">
+      <DependentUpon>FRM_UserManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RPT\RPT_AllProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_AllProduct.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_AllProductN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_AllProductN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_order_print.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_order_print.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_printSelectedProducrN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_printSelectedProducrN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_printselectedProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_printselectedProduct.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_print_requset.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_print_requset.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RRM_Reports.resx">
+      <DependentUpon>RRM_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LS-pharma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drug.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
